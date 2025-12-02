@@ -37,7 +37,7 @@ prompt = "A satellite terrain image." # text prompt
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Tokenizer and TextEncoder
-tokenizer = CLIPTokenizer.from_pretrained("runwayml/stable-diffusion-v1-5", subfolder="tokenizer")
+tokenizer = CLIPTokenizer.from_pretrained("runwayml/stable-diffusion-v1-5")
 text_encoder = CLIPTextModel.from_pretrained("runwayml/stable-diffusion-v1-5").to(device)
 
 # VAE
