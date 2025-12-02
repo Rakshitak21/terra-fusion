@@ -45,7 +45,7 @@ texture_vae = AutoencoderKL.from_pretrained("runwayml/stable-diffusion-v1-5", su
 heightmap_vae = AutoencoderKL.from_pretrained("Millennium-Nova/terrafusion-heightmap-vae").to(device)
 
 # UNet
-unet = UNet2DConditionModel.from_pretrained("Millennium-Nova/uncond-terrain-ldm", subfolder="unet").to(device)
+unet = UNet2DConditionModel.from_pretrained("Millennium-Nova/uncond-terrain-ldm").to(device)
 
 # Noise scheduler
 scheduler = DDPMScheduler.from_pretrained("Millennium-Nova/uncond-terrain-ldm", subfolder="scheduler")
